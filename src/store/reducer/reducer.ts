@@ -9,14 +9,17 @@ export interface Cosa {
     name: string;
     text: string;
 }
+//Definicion de la identidad de cosa
 export interface State extends EntityState<Cosa> {
     selectedCosaId: string | null;
 }
+//Adaptador de identidad
 export const adapter: EntityAdapter<Cosa> = createEntityAdapter<Cosa>();
+//Estado inicial de la identidad
 export const estadoInicial: State = adapter.getInitialState({
     selectedCosaId: null
 });
-
+//Reductor
 export function reducer(
     state = estadoInicial,
     action: myActions.All
@@ -52,6 +55,7 @@ export function reducer(
     }
 
 }
+
 export const selectCosaState = createFeatureSelector<State>('cosaStore');
 
 export const {

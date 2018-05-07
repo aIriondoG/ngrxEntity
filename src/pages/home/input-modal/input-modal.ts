@@ -7,14 +7,17 @@ import { NavParams, ViewController } from 'ionic-angular';
 export class InputModalPage {
 
   item = { name: "", text: "" };
-
+  title: string;
   constructor(
     public viewCtrl: ViewController,
     private params: NavParams
   ) {
-    let inputParams = this.params.get('item')
-    if (inputParams !== undefined) {
-      this.item = inputParams
+    let inputParams = this.params.get('item');
+    this.title = 'Añadir nueva tarjeta';
+    if (inputParams != null) {
+
+      this.title = 'Modificar tarjeta';
+      this.item = inputParams;
     }
   }
 

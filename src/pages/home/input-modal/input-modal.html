@@ -4,7 +4,7 @@
         <ion-buttons start>
             <button ion-button color="danger" (click)="cancel()">Cancelar</button>
         </ion-buttons>
-        <ion-title>Añadir una nueva cosa</ion-title>
+        <ion-title>{{title}}</ion-title>
     </ion-navbar>
 
 </ion-header>
@@ -14,11 +14,11 @@
     <ion-card>
         <ion-card-content>
             <ion-item>
-                <ion-label color="primary" floating>Nombre cosa:</ion-label>
+                <ion-label color="primary" floating>Nombre:</ion-label>
                 <ion-input [(ngModel)]="item.name"></ion-input>
             </ion-item>
             <ion-item>
-                <ion-label color="primary" floating>texto: </ion-label>
+                <ion-label color="primary" floating>Texto: </ion-label>
                 <ion-textarea [(ngModel)]="item.text" rows="3">
                 </ion-textarea>
             </ion-item>

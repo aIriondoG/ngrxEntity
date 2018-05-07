@@ -45,7 +45,9 @@ export class HomePage {
   deleteItem(id) {
     this.store.dispatch(new acciones.DeleteCosa({ id }))
   }
-  presentModal(item?: any) {
+  presentModal(item) {
+    console.log("Item: ");
+    console.log(item);
     let theModal = this.modalCtrl.create(InputModalPage, { item });
 
     theModal.onDidDismiss(data => {

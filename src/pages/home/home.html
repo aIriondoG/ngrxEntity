@@ -30,11 +30,11 @@
     <ion-card text-wrap>
       <ion-card-header>{{c.name}}</ion-card-header>
       <ion-card-content>
-        {{c.text}}<br>{{c.id}}
+        {{c.text}}<br><!--{{c.id}}-->
       </ion-card-content>
       <ion-row padding>
         <button ion-button color="danger" small (click)="deleteItem(c.id)">Delete</button>
-        <button ion-button small (click)="presentModal(item)">Editar</button>
+        <button ion-button small (click)="presentModal(c)">Editar</button>
       </ion-row>
     </ion-card>
   </div>
